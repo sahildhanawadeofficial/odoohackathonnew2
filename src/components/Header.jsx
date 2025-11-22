@@ -30,8 +30,8 @@ export default function Navbar() {
 
             {/* Desktop Menu */}
             <div className="hidden sm:flex items-center gap-8">
-                <Link href="#">Home</Link>
-                <Link href="#">About</Link>
+                <Link href="#"></Link>
+                <Link href="/Addproduct">Addproduct</Link>
                 <Link href="#">Contact</Link>
 
                 {/* Search */}
