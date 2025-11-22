@@ -61,7 +61,6 @@ export default async function RootLayout({ children }) {
             <div className="hidden md:block">
               <Sidebar />
             </div>
-
             <main className="flex-1 overflow-y-auto">
               {children}
             </main>
