@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import NextAuthProvider from '@/hooks/NextAuthProvider'
 import { getServerSession } from "next-auth/next"
 import authOptions from "@/lib/authOptions"
+import Sidebar from "@/components/Sidebar";
 
 
 
@@ -55,11 +56,19 @@ export default async function RootLayout({ children }) {
         {/* <h1 className="title">💰 <Image src="/logo2.jpeg" fill alt="The ILLUMINATED TRADER" /> The ILLUMINATED TRADER</h1> */}
         <NextAuthProvider session={session}>
           <Header />
-          <main className="flex-1">
-            {children}        {/* grows to fill remaining height */}
-          </main>
-          {/* <br /><br /> */}
+          <div className="flex">
+            {/* Sidebar visible only on md and above */}
+            <div className="hidden md:block">
+              <Sidebar />
+            </div>
+
+            <main className="flex-1 overflow-y-auto">
+              {children}
+            </main>
+          </div>
+
           <Footer />
+          {/* <br /><br /> */}
 
         </NextAuthProvider>
 
