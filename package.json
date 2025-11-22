@@ -16,6 +16,7 @@
     "autoprefixer": "^10.4.22",
     "lodash": "^4.17.21",
     "mongoose": "^8.20.1",
+    "nanoid": "^5.1.6",
     "next": "16.0.3",
     "next-auth": "^4.24.13",
     "postcss": "^8.5.6",

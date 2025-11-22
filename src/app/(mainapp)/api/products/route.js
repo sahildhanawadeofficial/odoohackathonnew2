@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import authOptions from "@/lib/authOptions";
 import Product from "@/models/Product";
+import { nanoid } from 'nanoid';
 
 export const POST = Connectdb(async (req) => {
     try {
@@ -47,7 +48,7 @@ export const POST = Connectdb(async (req) => {
         // -------------------------
         const product = await Product.create({
             name,
-            sku,
+            sku:`${sku}-${nanoid(6)}`,
             category: categoryArray,
             unit,
             description,
