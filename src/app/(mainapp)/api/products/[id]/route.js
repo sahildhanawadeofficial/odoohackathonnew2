@@ -4,9 +4,7 @@ import Product from "@/models/Product";
 import { getServerSession } from "next-auth/next";
 import authOptions from "@/lib/authOptions";
 
-// =============================
-// GET PRODUCT BY ID (OWNER ONLY)
-// =============================
+
 export const GET = Connectdb(async (req, { params }) => {
     try {
         const { id } = await params;

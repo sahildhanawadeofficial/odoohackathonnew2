@@ -38,8 +38,8 @@ const nosifer = Nosifer({
 });
 
 export const metadata = {
-  title: "The Illuminated Trader",
-  description: "Money management tool for binary options trading",
+  title: "Inventory Management System",
+  description: "This is money management system",
 };
 
 export default async function RootLayout({ children }) {
